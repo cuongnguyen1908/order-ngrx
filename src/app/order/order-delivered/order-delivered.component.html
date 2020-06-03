@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Oder number</th>
+            <th>Address</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orderDelivered">
+            <td>{{ order.orderCode}}</td>
+            <td>{{ order.address }}</td>
+            <td>{{ order.status }}</td>
+            <td>
+                <button type="button" class="btn btn-success" (click)="onSuccess(order)">Move to success</button>
+                <button type="button" class="btn btn-danger" (click)="onCancel(order)">Cancel</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
